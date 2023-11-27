@@ -1,0 +1,36 @@
+import React, { useState } from 'react';
+import './App.css';
+
+const RegisterForm = ({ onToggleForm }) => {
+    return (
+      <form className="Register-form">
+        <h1>Register</h1>
+        <div className="input-box">
+          <input type="text" required />
+          <label>Username</label>
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+        <div className="input-box">
+          <input type="text" required />
+          <label>Email</label>
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
+        <div className="input-box">
+          <input type="password" required />
+          <label>Password</label>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </div>
+        <div className="checkBox">
+          <span>
+            <input type="checkbox" id="register-checkbox" />
+            <label htmlFor="register-checkbox">I agree to the terms & conditions</label>
+          </span>
+          <h5>Forget Password ?</h5>
+        </div>
+        <button type="submit" className="submit-btn">Confirm Password</button>
+        <h5 className="Login-btn" onClick={onToggleForm}>Already have an account? Login</h5>
+      </form>
+    );
+  }
+
+export default RegisterForm;

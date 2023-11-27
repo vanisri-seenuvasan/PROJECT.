@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color:white;
+}
+
+section {
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.row {
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  position: relative;
+  height: 400px; /* Set a fixed height for all cards */
+  width: 350px; /* Set a fixed width for all cards */
+  margin: 10px 0;
+  transition: ease all 2.3s;
+  perspective: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover .cover {
+  transform: rotateX(0deg) rotateY(-180deg);
+}
+
+.card:hover .cover:before {
+  transform: translateZ(30px);
+}
+
+.card:hover .cover:after {
+  background-color:black;
+}
+
+.card:hover .cover h1 {
+  transform: translateZ(100px);
+}
+
+.card:hover .cover .price {
+  transform: translateZ(60px);
+}
+
+.card:hover .cover a {
+  transform: translateZ(-60px) rotatey(-180deg);
+}
+
+.cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.cover:before {
+  content: '';
+  position: absolute;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  transition: ease all 2.3s;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+}
+
+.cover:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  transition: ease all 1.3s;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.cover.item-a {
+ 
+background-image: url('https://img.freepik.com/free-photo/close-up-physician-s-hands-with-clipboard-pen_1232-370.jpg?size=626&ext=jpg&ga=GA1.1.1282626268.1700804783&semt=ais');
+
+  
+}
+
+.cover.item-b {
+  
+  background-image: url('https://tse2.mm.bing.net/th?id=OIP.AxsFUp83WrL_pgsLXyniUQHaE7&pid=Api&P=0&h=180');
+}  
+.cover.item-c {
+  background-image: url('https://s3-eu-west-2.amazonaws.com/signifyresearch/app/uploads/2018/11/23102313/EMR-zoom.jpeg');
+  
+}
+.cover h1 {
+  font-weight: 600;
+  position: absolute;
+  bottom: 55px;
+  left: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 3;
+  font-size: 3em;
+  transform: translateZ(0px);
+}
+
+.cover .price {
+  font-weight: 200;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 4;
+  font-size: 2em;
+  transform: translateZ(0px);
+}
+
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  ;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  transform: translateZ(-1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back a {
+  transform-style: preserve-3d;
+  transition: ease transform 2.3s, ease background 0.5s;
+  transform: translateZ(-1px) rotatey(-180deg);
+  background: transparent;
+  border: 1px solid white;
+  font-weight: 200;
+  font-size: 1.3em;
+  color:black;
+  font-weight: bolder;
+  padding: 14px 32px;
+  outline: none;
+  text-decoration: none;
+
+  &:hover {
+    background-color: white;
+    color: #0b0f08;
+  }
+}

@@ -1,0 +1,42 @@
+import React from 'react';
+import ProductCard from './ProductCard';
+import FooterAbt from './FooterAbt';
+import './AboutUs.css'; 
+
+const AboutUs = () => {
+  return (
+    
+    <div className="about-us-info">
+      <center>
+        <h1>About Us</h1>
+      </center>
+      <br />
+
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <p style={{ fontSize: '40px', fontStyle: 'normal', marginBottom: '10px' }}>
+          An e-Hospital is a workflow-based Integrated HMIS over the cloud. It is a generic application that addresses all the major functional areas of a hospital. The patient registration module of the e-Hospital application is used for patient registration in the OPD and Casualty departments as well as to book, confirm, and cancel appointments. As part of the Digital India initiative of the Ministry of Electronics and Information Technology, NIC has developed the e-Hospital, e-BloodBank, and Online Registration System (ORS) applications.
+        </p>
+        <img
+          src="https://ehospital.gov.in/ehospitalsso/images/ab-ehospital.png"
+          alt="e-Hospital Image"
+          style={{ float: 'right', maxHeight: '400px', maxWidth: '400px' }}
+        />
+        
+      
+      </div>
+      <div>
+    <section>
+        <div className="row">
+          <ProductCard title="Vision" className="item-a" />
+          <ProductCard title="Digitization" className="item-b" />
+          <ProductCard title="One stop Solution" price="155" className="item-c" />
+        </div>
+      </section>
+    </div>
+    <FooterAbt/>
+</div>
+
+  );
+};
+
+export default AboutUs;

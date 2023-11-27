@@ -1,0 +1,64 @@
+/* HeaderAbt.css */
+body {
+  margin: 0;
+  padding: 0;
+}
+  .header-abt {
+    width:100%;
+    position:fixed;
+    top:0;
+    float:left;
+    
+    right:0;
+    left:0;
+    margin-right: auto;
+    margin-left: auto;
+  
+    background-color:grey; /* Set your desired background color */
+     /* Set the text color */
+    padding-left:100px; /* Adjust padding as needed */
+    text-align: center;
+    max-width: 100%; /* Set the width to 100% */
+    height: 80px; /* Set the height as needed */
+    display: flex;
+  justify-content: space-between; /* Align items to the start and end */
+  align-items: center; 
+  }
+  .hospital-icon {
+    width: 80px; /* Set the width as needed */
+    height: 80px; /* Set the height as needed */
+     /* Adjust margin as needed */
+  }
+  .home-icon{
+    width: 40px; /* Set the width as needed */
+    height: 40px;
+  }
+  .abt-icon{
+    width: 40px; /* Set the width as needed */
+    height: 40px;
+  }
+  .header-abt h1 {
+    margin: 0;
+  }
+  body {
+    padding-top: 80px;
+  }
+  
+  
+  .header-abt nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .header-abt nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .header-abt nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
